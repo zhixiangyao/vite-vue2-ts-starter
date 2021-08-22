@@ -17,14 +17,16 @@
 </template>
 
 <script>
+import { ref } from '@vue/composition-api'
+
 export default {
   props: {
     msg: String,
   },
-  data() {
-    return {
-      count: 0,
-    }
+  setup() {
+    const count = ref(0)
+
+    return { count }
   },
 }
 </script>

@@ -12,6 +12,7 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.1.2",
     "vite-plugin-vue2": "^1.8.1",
     "vue": "^2.6.14"
   },
