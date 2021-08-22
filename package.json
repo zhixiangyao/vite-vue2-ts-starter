@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue2-starter",
+  "name": "vite-vue2-ts-starter",
   "version": "0.0.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
   "scripts": {
@@ -7,8 +7,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:eslint": "eslint \"{src,mock}/**/*.vue\" --fix",
-    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,css,less,scss,vue,html,md}\"",
+    "lint:eslint": "eslint \"{src,mock}/**/*.{vue,tsx}\" --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{ts,json,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
@@ -17,6 +17,9 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-define-config": "^1.0.9",
@@ -27,6 +30,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
+    "typescript": "^4.3.5",
     "vite": "^2.5.0",
     "vue-template-compiler": "^2.6.14"
   },

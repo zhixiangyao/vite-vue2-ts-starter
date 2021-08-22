@@ -18,8 +18,8 @@
 ## Clone
 
 ```shell
-git clone git@github.com:zhixiangyao/vite-vue2-starter.git
-cd vite-vue2-starter
+git clone git@github.com:zhixiangyao/vite-vue2-ts-starter.git
+cd vite-vue2-ts-starter
 pnpm i # 如果没有安装 pnpm, 请运行: npm install -g pnpm
 ```
 

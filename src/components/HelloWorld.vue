@@ -16,10 +16,10 @@
   </div>
 </template>
 
-<script>
-import { ref } from '@vue/composition-api'
+<script lang="ts">
+import { defineComponent, ref } from '@vue/composition-api'
 
-export default {
+export default defineComponent({
   props: {
     msg: String,
   },
@@ -28,7 +28,7 @@ export default {
 
     return { count }
   },
-}
+})
 </script>
 
 <style scoped>
