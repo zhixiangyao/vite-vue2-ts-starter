@@ -1,6 +1,6 @@
 {
   "name": "vite-vue2-ts-starter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
   "scripts": {
     "dev": "vite",
