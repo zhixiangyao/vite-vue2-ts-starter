@@ -1,0 +1,26 @@
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+html {
+  @apply overflow-y-scroll overflow-x-hidden;
+}
+
+html.dark {
+  background: #121212;
+  color: white;
+}
+
+html.dark::-webkit-scrollbar {
+  color: rgba(229, 231, 235, 1);
+}
