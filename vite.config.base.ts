@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { createVuePlugin } from 'vite-plugin-vue2'
+import { createVuePlugin as Vue2 } from 'vite-plugin-vue2'
 import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from 'path'
 
@@ -8,9 +8,8 @@ import { resolve } from 'path'
  */
 export const userConfig = defineConfig({
   plugins: [
-    createVuePlugin({
-      jsx: true,
-    }),
+    // https://github.com/underfin/vite-plugin-vue2
+    Vue2(),
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS(),
   ],
