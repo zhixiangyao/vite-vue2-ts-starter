@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
+import store from '/@/store'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
@@ -20,7 +21,8 @@ export default defineComponent({
         name: 'Home',
       },
     ]
-    return { navbarList }
+
+    return { navbarList, store }
   },
 })
 </script>
@@ -28,7 +30,7 @@ export default defineComponent({
 <template>
   <div class="h-full w-full">
     <Nav>
-      <template #title>{{ $store.state.title }}</template>
+      <template #title>{{ store.state.title }}</template>
 
       <template #default>
         <ul v-for="{ id, label, name } of navbarList">
