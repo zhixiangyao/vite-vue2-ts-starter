@@ -20,6 +20,7 @@
 import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
+  name: 'HelloWorld',
   props: {
     msg: String,
   },
