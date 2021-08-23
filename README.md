@@ -1,6 +1,6 @@
-# Vite + Vue2
+# Vite + Vue2 + TypeScript + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue2 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue2 TypeScript WindiCSS 进行开发。
 
 **编辑器:**
 
@@ -9,6 +9,7 @@
 **插件:**
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 **开发环境:**
 
