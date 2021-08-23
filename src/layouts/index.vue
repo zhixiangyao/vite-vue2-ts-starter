@@ -20,6 +20,11 @@ export default defineComponent({
         label: 'Home',
         name: 'Home',
       },
+      {
+        id: 2,
+        label: 'TensileColumn',
+        name: 'TensileColumn',
+      },
     ]
 
     return { navbarList, store }
@@ -40,6 +45,7 @@ export default defineComponent({
               name === $route.name ? 'dark:bg-gray-700 bg-black ' : `text-gray-300`,
               'dark:hover:bg-gray-700 hover:bg-black text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
             ]"
+            @click="$router.push({ name })"
           >
             {{ label }}
           </button>
