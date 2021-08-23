@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueCompositionAPI from '@vue/composition-api'
 
-import App from './App.vue'
+import router from '/@/router'
+import store from '/@/store'
+import App from '/@/App.vue'
 
 import 'virtual:windi.css'
 import '/@/styles/main.css'
@@ -9,6 +11,8 @@ import '/@/styles/main.css'
 Vue.use(VueCompositionAPI)
 
 const app = new Vue({
+  store,
+  router,
   render: (h) => h(App),
 })
 

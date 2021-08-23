@@ -8,7 +8,9 @@ import { resolve } from 'path'
  */
 export const userConfig = defineConfig({
   plugins: [
-    createVuePlugin({}),
+    createVuePlugin({
+      jsx: true,
+    }),
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS(),
   ],
