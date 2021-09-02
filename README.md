@@ -1,6 +1,6 @@
-# Vite + Vue 2 + VueRouter + Vuex + TypeScript + WindiCSS
+# Vite + Vue2 + Composition Api + VueRouter + Vuex + TypeScript + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue2 VueRouter Vuex TypeScript WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue2 Composition Api VueRouter Vuex TypeScript WindiCSS 进行开发。
 
 **编辑器:**
 
