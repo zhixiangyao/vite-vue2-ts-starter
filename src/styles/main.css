@@ -16,10 +16,6 @@ body {
   @apply overflow-y-scroll overflow-x-hidden;
 }
 
-body.dark::-webkit-scrollbar {
-  color: rgba(229, 231, 235, 1);
-}
-
 html.dark #app {
   background: #121212;
   color: white;
