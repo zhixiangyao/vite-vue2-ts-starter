@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const stores = {
   state: {
-    title: 'Vite + Vue3',
+    title: 'Vite + Vue2',
   },
 }
 

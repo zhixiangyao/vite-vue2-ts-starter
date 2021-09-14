@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <nav class="nav bg-gray-700 dark:bg-black fixed top-0 left-0 right-0 z-10">
+  <nav class="nav bg-gray-700 dark:bg-black fixed top-0 left-0 w-screen z-10">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div
         class="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden"

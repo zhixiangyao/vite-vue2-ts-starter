@@ -12,11 +12,11 @@ body,
   color: #2c3e50;
 }
 
-html {
+body {
   @apply overflow-y-scroll overflow-x-hidden;
 }
 
-html.dark {
+html.dark #app {
   background: #121212;
   color: white;
 }
