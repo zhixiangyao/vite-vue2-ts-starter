@@ -13,7 +13,7 @@
 
 **开发环境:**
 
-- NodeJs
+- NodeJS
 - Git
 
 ## Clone
