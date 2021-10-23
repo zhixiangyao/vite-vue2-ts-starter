@@ -1,9 +1,10 @@
-import { userConfig } from './vite.config.base'
+import { defineConfig } from 'vite'
+import { baseConfig } from './vite.config.base'
 import { getEnv } from './vite.config.utils'
 
-import type { UserConfigExport } from 'vite'
+import type { ConfigEnv } from 'vite'
 
-export default ({ command, mode }): UserConfigExport => {
+export default ({ command, mode }: ConfigEnv) => {
   /**
    * Such as:
    * import.meta.env.MODE: {string}       app runtime 的模式。
@@ -22,8 +23,8 @@ export default ({ command, mode }): UserConfigExport => {
   }, 66)
 
   if (command === 'serve') {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   } else {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   }
 }

@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite'
 import { createVuePlugin as Vue2 } from 'vite-plugin-vue2'
 import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from 'path'
 
+import type { UserConfigExport } from 'vite'
+
 /**
  * https://vitejs.dev/config/
  */
-export const userConfig = defineConfig({
+export const baseConfig: UserConfigExport = {
   plugins: [
     // https://github.com/underfin/vite-plugin-vue2
     Vue2(),
@@ -26,4 +27,4 @@ export const userConfig = defineConfig({
       localsConvention: 'camelCaseOnly',
     },
   },
-})
+}
