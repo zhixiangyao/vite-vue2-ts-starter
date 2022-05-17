@@ -17,17 +17,7 @@ export default defineComponent({
         </div>
 
         <div
-          class="
-            hidden
-            sm:hidden
-            md:hidden
-            lg:flex
-            xl:flex
-            flex-1
-            items-center
-            justify-center
-            sm:items-stretch sm:justify-start
-          "
+          class="hidden sm:hidden md:hidden lg:flex xl:flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="sm:block sm:ml-6">
             <div class="flex space-x-4 select-none">
