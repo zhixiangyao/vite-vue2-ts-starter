@@ -1,17 +1,17 @@
-# Vite + Vue2 + Composition Api + VueRouter + Vuex + TypeScript + WindiCSS
+# Vite + Vue2.7 + VueRouter + Vuex + TypeScript + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue2 Composition Api VueRouter Vuex TypeScript WindiCSS 进行开发。
+This template will help you start developing in Vite using Vue2.7+ VueRouter Vuex TypeScript WindiCSS.
 
-**编辑器:**
+**Editor:**
 
 - [VS Code](https://code.visualstudio.com/)
 
-**插件:**
+**VSCode Extension:**
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-**开发环境:**
+**Development ENV:**
 
 - NodeJS
 - Git
@@ -21,14 +21,14 @@
 ```shell
 git clone git@github.com:zhixiangyao/vite-vue2-ts-starter.git
 cd vite-vue2-ts-starter
-pnpm i # 如果没有安装 pnpm, 请运行: npm install -g pnpm
+pnpm i # If not install pnpm, please run: npm install -g pnpm
 ```
 
 ## Usage
 
 ### Development
 
-只需运行并访问 http://localhost:3000
+click it http://localhost:3000
 
 ```shell
 pnpm dev

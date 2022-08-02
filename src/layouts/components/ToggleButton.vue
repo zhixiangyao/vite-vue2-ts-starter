@@ -1,6 +1,6 @@
 <script lang="ts">
 import { useDark, useToggle } from '@vueuse/core'
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {

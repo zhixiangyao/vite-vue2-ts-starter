@@ -1,4 +1,4 @@
-import { createVuePlugin as Vue2 } from 'vite-plugin-vue2'
+import vue from '@vitejs/plugin-vue2'
 import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from 'path'
 
@@ -10,7 +10,7 @@ import type { UserConfigExport } from 'vite'
 export const baseConfig: UserConfigExport = {
   plugins: [
     // https://github.com/underfin/vite-plugin-vue2
-    Vue2(),
+    vue(),
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS(),
   ],

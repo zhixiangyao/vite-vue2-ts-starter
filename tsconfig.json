@@ -17,13 +17,17 @@
     },
     "lib": ["esnext", "dom"]
   },
+  "vueCompilerOptions": {
+    "target": 2.7
+  },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.css",
-    "src/**/*.scss"
+    "src/**/*.scss",
+    "src/**/*.png"
   ],
   "exclude": ["node_modules"]
 }
