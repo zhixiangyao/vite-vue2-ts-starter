@@ -1,3 +1,19 @@
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  name: 'HelloWorld',
+  props: {
+    msg: String,
+  },
+  setup() {
+    const count = ref(0)
+
+    return { count }
+  },
+})
+</script>
+
 <template>
   <div>
     <h1>{{ msg }}</h1>
@@ -15,22 +31,6 @@
     </p>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-  },
-  setup() {
-    const count = ref(0)
-
-    return { count }
-  },
-})
-</script>
 
 <style scoped>
 a {
