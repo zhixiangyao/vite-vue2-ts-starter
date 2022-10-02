@@ -1,15 +1,10 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
-  },
-  setup() {
-    const count = ref(0)
-
-    return { count }
   },
 })
 </script>
@@ -24,7 +19,6 @@ export default defineComponent({
       <a href="https://cn.vuejs.org" target="_blank">Vue 2 Documentation</a>
     </p>
 
-    <button type="button" @click="count++"> count is: {{ count }} </button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.

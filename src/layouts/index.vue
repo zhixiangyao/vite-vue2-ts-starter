@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import store from '/@/store'
+import { useAppStore } from '/@/stores'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
@@ -14,6 +14,7 @@ export default defineComponent({
     ToggleButton,
   },
   setup() {
+    const appStore = useAppStore()
     const navbarList = [
       {
         id: 1,
@@ -27,7 +28,7 @@ export default defineComponent({
       },
     ]
 
-    return { navbarList, store }
+    return { navbarList, appStore }
   },
 })
 </script>
@@ -35,7 +36,7 @@ export default defineComponent({
 <template>
   <div class="h-full w-full">
     <Nav>
-      <template #title>{{ store.state.title }}</template>
+      <template #title>{{ appStore.getTitle }}</template>
 
       <template #default>
         <ul v-for="{ id, label, name } of navbarList">

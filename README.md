@@ -1,6 +1,6 @@
-# Vite + Vue2.7 + VueRouter + Vuex + TypeScript + WindiCSS
+# Vite + Vue2.7 + VueRouter + Pinia + TypeScript + WindiCSS
 
-This template will help you start developing in Vite using Vue2.7+ VueRouter Vuex TypeScript WindiCSS.
+This template will help you start developing in Vite using Vue2.7+ VueRouter Pinia TypeScript WindiCSS.
 
 **Editor:**
 
