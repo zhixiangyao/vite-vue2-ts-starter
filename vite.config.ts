@@ -1,8 +1,57 @@
 import { defineConfig } from 'vite'
-import { baseConfig } from './vite.config.base'
-import { getEnv } from './vite.config.utils'
-
 import type { ConfigEnv } from 'vite'
+import { resolve } from 'path'
+import fs from 'fs'
+import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将 env 变量中的变量从 '.env*' file 提取出来
+
+import vue from '@vitejs/plugin-vue2'
+import vueJsx from '@vitejs/plugin-vue2-jsx'
+
+interface ENV {
+  [K: string]: string
+}
+
+export const getEnv = (mode: string) => {
+  const envFileName = `.env.${mode}`
+  const envObject = Object.create(null) as ENV
+
+  try {
+    const envConfig = dotenv.parse(fs.readFileSync(envFileName))
+    for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
+    return envObject
+  } catch (error) {
+    console.error(error)
+    return envObject
+  }
+}
+
+import type { UserConfigExport } from 'vite'
+
+/**
+ * https://vitejs.dev/config/
+ */
+export const baseConfig: UserConfigExport = {
+  plugins: [
+    // https://github.com/underfin/vite-plugin-vue2
+    vue(),
+    vueJsx({
+      // options are passed on to @vue/babel-preset-jsx
+    }),
+  ],
+  resolve: {
+    alias: [
+      {
+        find: '/@',
+        replacement: resolve(__dirname, './src'),
+      },
+    ],
+  },
+  css: {
+    modules: {
+      localsConvention: 'camelCaseOnly',
+    },
+  },
+}
 
 export default ({ command, mode }: ConfigEnv) => {
   /**

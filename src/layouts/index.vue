@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useAppStore } from '/@/stores'
+import { useDark } from '/@/hooks'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
@@ -15,6 +16,8 @@ export default defineComponent({
   },
   setup() {
     const appStore = useAppStore()
+    const isDark = useDark()
+
     const navbarList = [
       {
         id: 1,
@@ -28,7 +31,7 @@ export default defineComponent({
       },
     ]
 
-    return { navbarList, appStore }
+    return { navbarList, appStore, isDark }
   },
 })
 </script>
@@ -43,8 +46,9 @@ export default defineComponent({
           <button
             :key="id"
             :class="[
-              name === $route.name ? 'dark:bg-gray-700 bg-black ' : `text-gray-300`,
-              'dark:hover:bg-gray-700 hover:bg-black text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+              name === $route.name ? (isDark ? 'dark:bg-gray-700' : 'bg-black') : `text-gray-300`,
+              isDark ? 'dark:hover:bg-gray-700' : 'hover:bg-black',
+              'text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
             ]"
             @click="$route.name !== name && $router.push({ name })"
           >

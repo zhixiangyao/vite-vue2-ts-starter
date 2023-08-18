@@ -49,7 +49,8 @@ export default defineComponent({
       --grid-item-border-color: red;
 
       z-index: 1;
-      box-shadow: inset 0 0 0 var(--grid-item-border-width-half) var(--grid-item-border-color),
+      box-shadow:
+        inset 0 0 0 var(--grid-item-border-width-half) var(--grid-item-border-color),
         0 0 0 var(--grid-item-border-width-half) var(--grid-item-border-color);
       color: red;
     }
