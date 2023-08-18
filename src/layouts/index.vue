@@ -46,8 +46,8 @@ export default defineComponent({
           <button
             :key="id"
             :class="[
-              name === $route.name ? (isDark ? 'dark:bg-gray-700' : 'bg-black') : `text-gray-300`,
-              isDark ? 'dark:hover:bg-gray-700' : 'hover:bg-black',
+              name === $route.name ? (isDark ? 'bg-gray-700' : 'bg-black') : `text-gray-300`,
+              isDark ? 'hover:bg-gray-700' : 'hover:bg-black',
               'text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
             ]"
             @click="$route.name !== name && $router.push({ name })"

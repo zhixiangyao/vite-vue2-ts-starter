@@ -14,10 +14,7 @@ export default defineComponent({
 
 <template>
   <main
-    :class="[
-      'flex flex-col justify-center items-center min-h-screen pt-16',
-      isDark && 'dark:bg-black',
-    ]"
+    :class="['flex flex-col justify-center items-center min-h-screen pt-16', isDark && 'bg-black']"
   >
     <slot name="default" />
   </main>
