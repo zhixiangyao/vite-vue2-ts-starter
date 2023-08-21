@@ -1,19 +1,5 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useDark } from '/@/hooks'
-
-export default defineComponent({
-  name: 'Nav',
-  setup() {
-    const isDark = useDark()
-
-    return { isDark }
-  },
-})
-</script>
-
 <template>
-  <nav :class="['nav bg-gray-700 fixed top-0 left-0 w-screen z-10', isDark && 'bg-black']">
+  <nav class="nav bg-gray-700 fixed top-0 left-0 w-screen z-10">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div
         class="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden"
@@ -43,5 +29,9 @@ export default defineComponent({
 <style scoped>
 .nav {
   padding-top: env(safe-area-inset-top);
+}
+
+html.dark .nav {
+  @apply bg-black;
 }
 </style>

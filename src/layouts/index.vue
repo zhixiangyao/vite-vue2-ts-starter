@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useAppStore } from '/@/stores'
-import { useDark } from '/@/hooks'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
@@ -16,7 +15,6 @@ export default defineComponent({
   },
   setup() {
     const appStore = useAppStore()
-    const isDark = useDark()
 
     const navbarList = [
       {
@@ -31,7 +29,7 @@ export default defineComponent({
       },
     ]
 
-    return { navbarList, appStore, isDark }
+    return { navbarList, appStore }
   },
 })
 </script>
@@ -46,9 +44,8 @@ export default defineComponent({
           <button
             :key="id"
             :class="[
-              name === $route.name ? (isDark ? 'bg-gray-700' : 'bg-black') : `text-gray-300`,
-              isDark ? 'hover:bg-gray-700' : 'hover:bg-black',
-              'text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+              name === $route.name && 'activated',
+              'button text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
             ]"
             @click="$route.name !== name && $router.push({ name })"
           >
@@ -67,3 +64,21 @@ export default defineComponent({
     </Main>
   </div>
 </template>
+
+<style scoped>
+.button {
+  @apply hover:bg-black;
+}
+
+.button.activated {
+  @apply bg-black;
+}
+
+html.dark .button {
+  @apply hover:bg-gray-700;
+}
+
+html.dark .button.activated {
+  @apply bg-gray-700;
+}
+</style>

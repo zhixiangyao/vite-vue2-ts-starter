@@ -3,6 +3,7 @@ import { defineComponent } from 'vue'
 import { useDark, useToggle } from '/@/hooks'
 
 export default defineComponent({
+  name: 'ToggleButton',
   props: {
     msg: String,
   },
