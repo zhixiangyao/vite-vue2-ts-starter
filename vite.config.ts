@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import type { ConfigEnv } from 'vite'
+import type { ConfigEnv, UserConfigExport } from 'vite'
 import { resolve } from 'path'
 import fs from 'fs'
 import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将 env 变量中的变量从 '.env*' file 提取出来
@@ -11,7 +11,7 @@ interface ENV {
   [K: string]: string
 }
 
-export const getEnv = (mode: string) => {
+const getEnv = (mode: string) => {
   const envFileName = `.env.${mode}`
   const envObject = Object.create(null) as ENV
 
@@ -25,12 +25,10 @@ export const getEnv = (mode: string) => {
   }
 }
 
-import type { UserConfigExport } from 'vite'
-
 /**
  * https://vitejs.dev/config/
  */
-export const baseConfig: UserConfigExport = {
+const baseConfig: UserConfigExport = {
   plugins: [
     // https://github.com/underfin/vite-plugin-vue2
     vue(),
