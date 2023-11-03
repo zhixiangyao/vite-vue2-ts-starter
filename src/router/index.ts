@@ -12,12 +12,12 @@ const routes = [
       {
         path: 'Home',
         name: 'Home',
-        component: () => import('/@/views/Home.vue'),
+        component: () => import('/@/pages/Home.vue'),
       },
       {
         path: 'TensileColumn',
         name: 'TensileColumn',
-        component: () => import('/@/views/TensileColumn.vue'),
+        component: () => import('/@/pages/TensileColumn.vue'),
       },
     ],
   },
