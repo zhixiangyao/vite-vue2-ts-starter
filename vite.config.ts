@@ -2,7 +2,6 @@ import type { ConfigEnv, UserConfigExport } from 'vite'
 import fs from 'node:fs'
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue2'
-import vueJsx from '@vitejs/plugin-vue2-jsx'
 
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
@@ -13,7 +12,6 @@ import { defineConfig } from 'vite'
 const baseConfig: UserConfigExport = {
   plugins: [
     vue(),
-    vueJsx(),
   ],
   resolve: {
     alias: [

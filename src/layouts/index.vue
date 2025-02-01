@@ -1,16 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Main from './components/Main.vue'
 
-import Nav from './components/Nav.vue'
+import LayoutMain from './components/LayoutMain.vue'
+import LayoutNav from './components/LayoutNav.vue'
 import ToggleButton from './components/ToggleButton.vue'
 import { useAppStore } from '/@/stores'
 
 export default defineComponent({
   name: 'Default',
   components: {
-    Nav,
-    Main,
+    LayoutNav,
+    LayoutMain,
     ToggleButton,
   },
   setup() {
@@ -36,13 +36,13 @@ export default defineComponent({
 
 <template>
   <div class="h-full w-full">
-    <Nav>
+    <LayoutNav>
       <template #title>
         {{ appStore.getTitle }}
       </template>
 
       <template #default>
-        <ul v-for="{ id, label, name } of navbarList">
+        <ul v-for="{ id, label, name } of navbarList" :key="id">
           <button
             :key="id"
             class="button text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium" :class="[
@@ -58,11 +58,11 @@ export default defineComponent({
       <template #info>
         <ToggleButton />
       </template>
-    </Nav>
+    </LayoutNav>
 
-    <Main>
+    <LayoutMain>
       <router-view />
-    </Main>
+    </LayoutMain>
   </div>
 </template>
 
