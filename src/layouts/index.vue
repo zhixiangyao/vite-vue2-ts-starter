@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useAppStore } from '/@/stores'
+import Main from './components/Main.vue'
 
 import Nav from './components/Nav.vue'
-import Main from './components/Main.vue'
 import ToggleButton from './components/ToggleButton.vue'
+import { useAppStore } from '/@/stores'
 
 export default defineComponent({
   name: 'Default',
@@ -37,15 +37,16 @@ export default defineComponent({
 <template>
   <div class="h-full w-full">
     <Nav>
-      <template #title>{{ appStore.getTitle }}</template>
+      <template #title>
+        {{ appStore.getTitle }}
+      </template>
 
       <template #default>
         <ul v-for="{ id, label, name } of navbarList">
           <button
             :key="id"
-            :class="[
+            class="button text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium" :class="[
               name === $route.name && 'activated',
-              'button text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
             ]"
             @click="$route.name !== name && $router.push({ name })"
           >

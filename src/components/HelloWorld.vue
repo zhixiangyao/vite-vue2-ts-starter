@@ -23,7 +23,9 @@ export default defineComponent({
 
         <p>
           Edit
-          <code>src/components/HelloWorld.vue</code> to test hot module replacement.
+          <code>src/components/HelloWorld.vue</code>
+          {' '}
+          to test hot module replacement.
         </p>
       </div>
     )

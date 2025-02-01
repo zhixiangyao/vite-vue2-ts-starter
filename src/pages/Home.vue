@@ -1,21 +1,16 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'Home',
-})
-</script>
-
 <script setup lang="ts">
-import { useAppStore } from '/@/stores'
+import { defineComponent } from 'vue'
 import HelloWorld from '/@/components/HelloWorld.vue'
+import { useAppStore } from '/@/stores'
+
+defineComponent({ name: 'Home' })
 
 const appStore = useAppStore()
 </script>
 
 <template>
   <div class="flex flex-col items-center">
-    <img class="m-auto" alt="Vue logo" src="../assets/logo.png" />
+    <img class="m-auto" alt="Vue logo" src="../assets/logo.png">
     <HelloWorld class="text-center" msg="Hello Vue 2 + Vite" />
 
     <button

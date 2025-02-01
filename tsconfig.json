@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleDetection": "force",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "preserve",
-    "strict": true,
-    "allowJs": false,
-    "sourceMap": true,
-    "noEmit": true,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["vite/client", "node"],
-    "typeRoots": ["./node_modules/@types/", "./node_modules/"],
-    "baseUrl": ".",
     "paths": {
       "/@/*": ["src/*"]
     },
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
+    "types": ["client.d.ts", "node"],
+    "allowJs": false,
+    "strict": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "vueCompilerOptions": {
     "target": 2.7

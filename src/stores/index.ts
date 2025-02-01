@@ -1,5 +1,5 @@
-import { defineStore, PiniaVuePlugin, createPinia } from 'pinia'
-import Vue, { ref, computed } from 'vue'
+import { createPinia, defineStore, PiniaVuePlugin } from 'pinia'
+import Vue, { computed, ref } from 'vue'
 
 Vue.use(PiniaVuePlugin)
 

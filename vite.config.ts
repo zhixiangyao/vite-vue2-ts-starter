@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
 import type { ConfigEnv, UserConfigExport } from 'vite'
-import { resolve } from 'path'
-import fs from 'fs'
-import dotenv from 'dotenv'
-
+import fs from 'node:fs'
+import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue2'
 import vueJsx from '@vitejs/plugin-vue2-jsx'
+
+import dotenv from 'dotenv'
+import { defineConfig } from 'vite'
 
 /**
  * https://vitejs.dev/config/
@@ -43,14 +43,15 @@ export default ({ command, mode }: ConfigEnv) => {
 
   setTimeout(() => {
     console.log()
-    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    console.log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    console.log('\x1B[33m%s\x1B[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    console.log('\x1B[36m%s\x1B[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
     console.log()
   }, 66)
 
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })
-  } else {
+  }
+  else {
     return defineConfig({ ...baseConfig })
   }
 }
