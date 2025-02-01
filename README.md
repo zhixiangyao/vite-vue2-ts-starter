@@ -45,7 +45,5 @@ pnpm build
 
 ```shell
 pnpm lint
-pnpm lint:eslint
-pnpm lint:prettier
 pnpm lint:stylelint
 ```
