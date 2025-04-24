@@ -14,11 +14,6 @@ const routes = [
         name: 'Home',
         component: () => import('/@/pages/Home.vue'),
       },
-      {
-        path: 'TensileColumn',
-        name: 'TensileColumn',
-        component: () => import('/@/pages/TensileColumn.vue'),
-      },
     ],
   },
 ]

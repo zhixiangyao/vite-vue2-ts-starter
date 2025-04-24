@@ -22,11 +22,6 @@ export default defineComponent({
         label: 'Home',
         name: 'Home',
       },
-      {
-        id: 2,
-        label: 'TensileColumn',
-        name: 'TensileColumn',
-      },
     ]
 
     return { navbarList, appStore }
