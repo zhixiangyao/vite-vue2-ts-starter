@@ -23,7 +23,7 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "pinia": "2.3.1",
+    "pinia": "2.0.36",
     "vue": "2.7.16",
     "vue-router": "3.6.5"
   },
