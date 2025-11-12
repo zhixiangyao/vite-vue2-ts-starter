@@ -10,8 +10,8 @@
     "url": "git+https://github.com/zhixiangyao/vite-vue2-ts-starter.git"
   },
   "engines": {
-    "node": ">=22",
-    "pnpm": ">=9"
+    "node": ">=24",
+    "pnpm": ">=10"
   },
   "scripts": {
     "dev": "vite --host",
