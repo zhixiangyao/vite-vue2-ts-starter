@@ -7,5 +7,8 @@
   "css.customData": [".vscode/tailwindcss.json"],
   "files.associations": {
     "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.configFile": {
+    "src/styles/app.css": "src/**"
   }
 }
