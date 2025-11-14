@@ -8,7 +8,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "/@/*": ["src/*"]
+      "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
@@ -21,9 +21,6 @@
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
-  },
-  "vueCompilerOptions": {
-    "target": 2.7
   },
   "include": ["./src"],
   "exclude": ["node_modules", "*.js"]

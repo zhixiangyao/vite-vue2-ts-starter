@@ -1,10 +1,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+import { useAppStore } from '~/stores'
 import LayoutMain from './components/LayoutMain.vue'
 import LayoutNav from './components/LayoutNav.vue'
 import ToggleButton from './components/ToggleButton.vue'
-import { useAppStore } from '/@/stores'
 
 export default defineComponent({
   name: 'Default',

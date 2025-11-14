@@ -1,9 +1,6 @@
 import type { ConfigEnv, UserConfigExport } from 'vite'
-import fs from 'node:fs'
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue2'
-
-import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
 
 const baseConfig: UserConfigExport = {
@@ -11,7 +8,7 @@ const baseConfig: UserConfigExport = {
   resolve: {
     alias: [
       {
-        find: '/@',
+        find: '~',
         replacement: resolve(__dirname, './src'),
       },
     ],
@@ -23,11 +20,7 @@ const baseConfig: UserConfigExport = {
   },
 }
 
-export default ({ command, mode }: ConfigEnv) => {
-  const { VITE_APP_NODE_ENV } = dotenv.parse(fs.readFileSync(`.env.${mode}`))
-
-  console.log('\x1B[33m%s\x1B[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-
+export default ({ command }: ConfigEnv) => {
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })
   }

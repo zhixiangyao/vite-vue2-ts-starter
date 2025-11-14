@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '/@/components/HelloWorld.vue'
-import { useAppStore } from '/@/stores'
+import HelloWorld from '~/components/HelloWorld.vue'
+import { useAppStore } from '~/stores'
 
 defineComponent({ name: 'Home' })
 

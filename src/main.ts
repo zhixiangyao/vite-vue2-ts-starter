@@ -1,8 +1,8 @@
 import Vue from 'vue'
+import router from '~/router'
+import { pinia } from '~/stores'
 import App from './App.vue'
-import '/@/styles/app.css'
-import router from '/@/router'
-import { pinia } from '/@/stores'
+import '~/styles/app.css'
 
 const app = new Vue({
   pinia,
