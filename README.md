@@ -49,5 +49,5 @@ pnpm build
 
 ```shell
 pnpm lint
-pnpm lint:stylelint
+pnpm lint:css
 ```
